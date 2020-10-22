@@ -10,9 +10,9 @@ public class MD5Example {
 
     public static void main(String[] args) {
 
-        String st = "devcolibri";
-        String st2 = "devcolibri";
-        String st3 = new String("devcolibri");
+        String st = "AlexD";
+        String st2 = "AlexD";
+        String st3 = new String("AlexD");
         System.out.println("Custom MD5:");
         System.out.println(MD5Util.md5Custom(st));
         System.out.println("Custom MD5:");

@@ -9,10 +9,16 @@ import com.md5.example1.utils.MD5Util;
 public class MD5Example {
 
     public static void main(String[] args) {
-        String st = "devcolibri";
 
+        String st = "devcolibri";
+        String st2 = "devcolibri";
+        String st3 = new String("devcolibri");
         System.out.println("Custom MD5:");
         System.out.println(MD5Util.md5Custom(st));
+        System.out.println("Custom MD5:");
+        System.out.println(MD5Util.md5Custom(st2));
+        System.out.println("Custom MD5:");
+        System.out.println(MD5Util.md5Custom(st3));
         System.out.println("Apache MD5:");
         System.out.println(MD5Util.md5Apache(st));
     }

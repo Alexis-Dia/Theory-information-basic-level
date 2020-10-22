@@ -2,6 +2,7 @@ package com.md5.example1.utils;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
+import javax.xml.bind.DatatypeConverter;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -32,6 +33,7 @@ public class MD5Util {
         while( md5Hex.length() < 32 ){
             md5Hex = "0" + md5Hex;
         }
+        System.out.println("Converted value = " + converter(digest));
 
         return md5Hex;
     }
@@ -40,5 +42,9 @@ public class MD5Util {
         String md5Hex = DigestUtils.md5Hex(st);
 
         return md5Hex;
+    }
+
+    private static String converter (byte[] digest) {
+        return DatatypeConverter.printHexBinary(digest).toLowerCase();
     }
 }
